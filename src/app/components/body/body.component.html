@@ -1,0 +1,92 @@
+
+    <!-- Home -->
+    <div class="container">
+     
+        <div class="row">
+          <div class="col-xs-2 col-lg-2" onclick="getData()">
+            <i class="far fa-arrow-alt-circle-left fa-3x" id="return"></i>
+          </div>
+          <div class="col-xs-8 col-lg-6 col-lg-offset-1" id="title" onclick="getData()">
+            <img class="img-responsive" src="assets/images/pokemon_title.png" alt="pokemon">
+          </div>
+        </div>
+  
+        <div class=" row">
+          <div class="col-lg-4 col-xs-10 col-lg-offset-4 col-xs-offset-1">
+            <div class="input-group">
+              <input type="text" id="searcher" class="form-control" placeholder="Search pokemons (A, B ...)">
+              <span class="input-group-btn">
+                <button class="btn btn-default" id="search-btn" type="button">  Go!  </button>
+              </span>
+            </div>
+          </div>    
+        </div>
+        <div class="row" id="pokemon-container"></div>
+      </div>
+  
+      <!-- Pokemon Modal -->
+      <div class="modal fade pokemonModal " tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <div class="big-dot"></div>
+              <div class="red-dot dot"></div>
+              <span class="yellow-dot dot"></span>
+              <span class="green-dot dot"></span>
+              <button type="button" class="close" id="close-modal" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            </div>
+            <div class="modal-body">
+  
+              <div class="row">
+  
+                <div class="col-lg-6 col-xs-6">
+  
+                  <div class="row white">
+                    <!-- Image-->
+                    <div class="col-xs-12">
+                      <p><strong id="name" class="white"></strong></p>
+                      <div id="image"></div>
+                    </div>
+                    <!-- About -->
+                    <div class="col-xs-12">  
+                      <div><p><strong>ABOUT:</strong></p><p id="description"></p></div>
+                    </div>
+                  </div>
+        
+                </div>
+  
+                <!-- Bullets -->
+                <div class="col-xs-5" id="data-bullets">
+  
+                  <div class="row">
+                    <!-- First section of bullets -->
+                    <div class="col-xs-12" id="title-bullets">
+                        <p class="text-center">
+                            <i class="fas fa-sync-alt fa-2x text-center front" id="rotate-img"></i>
+                        </p>
+                    </div>
+                    <div class="col-xs-12 col-lg-6">
+                      <p>Height: <span id="height"></span></p> 
+                      <p>Weight: <span id="weight"></span></p> 
+                      <p>Habitat: <span id="habitat"></span></p>
+                      <p>Type: </p>
+                        <ul id="type"></ul>
+                      <p>Abilities: </p>
+                        <ul id="ability"></ul>
+                    </div>
+  
+                    <!-- Second Section of Bullets -->
+                    <div class="col-xs-12 col-lg-6">
+                      <p>Speed: <span id="speed"></span></p>
+                      <p>HP: <span id="hp"></span></p>
+                      <p>Attack: <span id="attack"></span></p>
+                      <p>Defense: <span id="defense"></span></p>
+                      <p>Capture Rate: <span id="cap-rate"></span></p>
+                    </div>
+                  </div>  
+  
+              </div>
+            </div>   
+          </div>
+        </div>
+      </div>
